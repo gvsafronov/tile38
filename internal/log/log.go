@@ -171,14 +171,14 @@ var emptyFormat string
 // Infof ...
 func Infof(format string, args ...interface{}) {
 	if llevel.Load() >= 1 {
-		log(1, "INFO", "\x1b[36m", true, format, args...)
+		log(1, "INFO", "\x1b[38;5;44m", true, format, args...)
 	}
 }
 
 // Info ...
 func Info(args ...interface{}) {
 	if llevel.Load() >= 1 {
-		log(1, "INFO", "\x1b[36m", false, emptyFormat, args...)
+		log(1, "INFO", "\x1b[38;5;44m", false, emptyFormat, args...)
 	}
 }
 
